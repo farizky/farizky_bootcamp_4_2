@@ -1,0 +1,70 @@
+
+
+<table class="table table-striped">
+  <tr style="border-bottom-style:solid;">
+    <th><input type="checkbox" name="" value=""></th>
+    <th>ID</th>
+    <th>Course</th>
+    <th>Dosen</th>
+     <th>student</th>
+    
+    <th>Action</th>
+  </tr>
+  
+
+  <tr *ngFor="let b of data_course; let i = index">
+    <th><input type="checkbox" name="" value=""></th>
+    <td>{{b.id}}</td>
+    <td>{{b.course}}</td>
+    <td>{{b.dosen}}</td>
+    <td>{{b.student}}</td>
+   
+     <td>
+      <button type="button"  class="btn btn-info" style="border-radius:0%">Edit</button>
+      <button type="button" class="btn btn-danger" style="border-radius:0%">Delete</button>
+    </td> 
+  </tr>
+
+  
+</table>
+
+<!-- menambahkan kelas -->
+
+<form class="form-horizontal" style="margin-top:30px">
+
+<div class="form-group">
+    <label class="col-sm-2 control-label" style="font-weight:100;font-family:'Times New Roman', Times, serif">Id <label style="color:red">*</label></label>
+   <div class="col-sm-7">
+    <p><input type="text" class="form-control" [(ngModel)]="newid" ></p>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-sm-2 control-label" style="font-weight:100;font-family:'Times New Roman', Times, serif">course <label style="color:red">*</label></label>
+    <div class="col-sm-7">
+    <p><input type="text" class="form-control" [(ngModel)]="newcourse"></p>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-sm-2 control-label" style="font-weight:100;font-family:'Times New Roman', Times, serif">dosen <label style="color:red">*</label></label>
+   <div class="col-sm-7">
+    <p><input type="text" class="form-control " [(ngModel)]="newdosen"></p>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-sm-2 control-label" style="font-weight:100;font-family:'Times New Roman', Times, serif">Student <label style="color:red">*</label></label>
+   <div class="col-sm-7">
+    <p><input type="text" class="form-control"[(ngModel)]="newstudent"></p>
+    </div>
+</div>
+
+<div class="col-sm-offset-2">
+    <button type="button" (click)="addcourse()" style="margin-left:20px;background-color:lightseagreen;border-style:none;padding: 6px 12px;color:white">Add Book</button>  
+  </div>
+
+</form>
+
+
+
